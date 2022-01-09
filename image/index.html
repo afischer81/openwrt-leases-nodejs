@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenWRT dnsmasq DHCP leases</title>
+    <style>
+        .row div {
+            float: left;
+            clear: none;
+        }
+    </style>
+  <link rel="stylesheet" type="text/css" href="node_modules/datatables/media/css/jquery.dataTables.css">
+</head>
+<body>
+
+    <h1>
+        OpenWRT dnsmasq DHCP leases
+    </h1>
+
+    <table class="cell-border display" id="leases">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>IP</th>
+                <th>MAC</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <!-- <script>
+        $(function(){
+          $("#leases").dataTable();
+        }) 
+        </script> -->
+      </table>
+
+    <!-- jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript
+    <script src="node_modules/bootstrap/js/bootstrap.min.js"></script> -->
+
+    <!-- DataTables JavaScript -->
+    <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+
+    <!-- Papaparse -->
+    <script src="node_modules/papaparse/papaparse.min.js"></script>
+
+    <script src="netzwerk.js"></script>
+
+</body>
+</html>
