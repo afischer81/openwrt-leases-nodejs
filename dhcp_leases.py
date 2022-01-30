@@ -12,9 +12,11 @@ def get_leases():
             t = int(tmp[0])
             if t > 0:
                 t = round((datetime.datetime.fromtimestamp(t) - now).total_seconds())
-            t = datetime.timedelta(seconds=t)
+            t = str(datetime.timedelta(seconds=t))
+            t = '0' + t if t[1] == ':' else t
             mac = tmp[1].upper()
-            ip = tmp[2]
+            ip = tmp[2].split('.')
+            ip = '.'.join(ip[:3]) + '.{:03d}'.format(int(ip[3]))
             name = tmp[3]
             if len(tmp) > 4 and tmp[4] != '*':
                 mac += ',' + tmp[4].upper()
